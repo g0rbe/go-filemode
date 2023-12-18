@@ -124,21 +124,20 @@ const (
 	S_ISUID  Mode = 0004000  // This is the set-user-ID on execute bit.
 	S_ISGID  Mode = 0002000  // This is the set-group-ID on execute bit.
 	S_ISVTX  Mode = 0001000  // This is the sticky bit.
-)
 
-// Easy to use aliases
-const (
-	ReadUser  = S_IRUSR // Read user
-	WriteUser = S_IWUSR // Write user
-	ExecUser  = S_IXUSR // Execute user
+	// Easy to use aliases
 
-	ReadGroup  = S_IRGRP // Read group
-	WriteGroup = S_IWGRP // Write group
-	ExecGroup  = S_IXGRP // Execute group
+	ReadUser  Mode = S_IRUSR // Read user
+	WriteUser Mode = S_IWUSR // Write user
+	ExecUser  Mode = S_IXUSR // Execute user
 
-	ReadOther  = S_IROTH // Read other
-	WriteOther = S_IWOTH // Write other
-	ExecOther  = S_IXOTH // Execute other
+	ReadGroup  Mode = S_IRGRP // Read group
+	WriteGroup Mode = S_IWGRP // Write group
+	ExecGroup  Mode = S_IXGRP // Execute group
+
+	ReadOther  Mode = S_IROTH // Read other
+	WriteOther Mode = S_IWOTH // Write other
+	ExecOther  Mode = S_IXOTH // Execute other
 )
 
 // Set sets m bit in mode.
